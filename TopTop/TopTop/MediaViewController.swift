@@ -25,6 +25,7 @@ class MediaViewController: UIViewController {
         prepareSegmentedControl()
         
         navigationBar = UINavigationBar(frame: view.frame)
+        navigationBar.delegate = self
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
         
         customNavigationItem = UINavigationItem()
@@ -53,5 +54,12 @@ class MediaViewController: UIViewController {
         
         segmentedControl.tintColor = .purple
         segmentedControl.selectedSegmentIndex = 0
+    }
+}
+
+// MARK: - UIBarPositioningDelegate, UINavigationBarDelegate
+extension MediaViewController: UIBarPositioningDelegate, UINavigationBarDelegate {
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
 }
