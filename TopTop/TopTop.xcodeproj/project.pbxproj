@@ -15,6 +15,7 @@
 		AC0FEBDB228839480094BA3D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0FEBDA228839480094BA3D /* Movie.swift */; };
 		AC4EE171228839D9008A282D /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE170228839D9008A282D /* Genre.swift */; };
 		AC4EE17322883AB0008A282D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE17222883AB0008A282D /* Networking.swift */; };
+		AC4EE17522883D97008A282D /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE17422883D97008A282D /* MediaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AC0FEBDA228839480094BA3D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		AC4EE170228839D9008A282D /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		AC4EE17222883AB0008A282D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		AC4EE17422883D97008A282D /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				AC0FEBB4228838880094BA3D /* LaunchScreen.storyboard */,
 				AC0FEBB7228838880094BA3D /* Info.plist */,
 				AC4EE17222883AB0008A282D /* Networking.swift */,
+				AC4EE17422883D97008A282D /* MediaViewController.swift */,
 			);
 			path = TopTop;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4EE171228839D9008A282D /* Genre.swift in Sources */,
+				AC4EE17522883D97008A282D /* MediaViewController.swift in Sources */,
 				AC0FEBDB228839480094BA3D /* Movie.swift in Sources */,
 				AC0FEBAC228838860094BA3D /* AppDelegate.swift in Sources */,
 				AC4EE17322883AB0008A282D /* Networking.swift in Sources */,
