@@ -107,15 +107,12 @@
 		AC0FEBAA228838860094BA3D /* TopTop */ = {
 			isa = PBXGroup;
 			children = (
-				AC0FEBD92288393D0094BA3D /* Model */,
 				AC0FEBAB228838860094BA3D /* AppDelegate.swift */,
-				AC0FEBB2228838880094BA3D /* Assets.xcassets */,
-				AC0FEBB4228838880094BA3D /* LaunchScreen.storyboard */,
-				AC0FEBB7228838880094BA3D /* Info.plist */,
 				AC4EE17222883AB0008A282D /* Networking.swift */,
 				AC4EE17422883D97008A282D /* MediaViewController.swift */,
-				AC4EE17622884308008A282D /* MovieTableViewCell.swift */,
-				AC4EE17A2288493A008A282D /* PlaylistTableViewCell.swift */,
+				AC4EE17C22884BA1008A282D /* View */,
+				AC0FEBD92288393D0094BA3D /* Model */,
+				AC4EE17D22884BD1008A282D /* Supporting Files */,
 			);
 			path = TopTop;
 			sourceTree = "<group>";
@@ -146,6 +143,25 @@
 				AC4EE1782288481E008A282D /* Playlist.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AC4EE17C22884BA1008A282D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC4EE17622884308008A282D /* MovieTableViewCell.swift */,
+				AC4EE17A2288493A008A282D /* PlaylistTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC4EE17D22884BD1008A282D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC0FEBB2228838880094BA3D /* Assets.xcassets */,
+				AC0FEBB4228838880094BA3D /* LaunchScreen.storyboard */,
+				AC0FEBB7228838880094BA3D /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,7 +470,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZX5XTRMYJH;
-				INFOPLIST_FILE = TopTop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TopTop/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhonny.TopTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,7 +489,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZX5XTRMYJH;
-				INFOPLIST_FILE = TopTop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TopTop/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhonny.TopTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
