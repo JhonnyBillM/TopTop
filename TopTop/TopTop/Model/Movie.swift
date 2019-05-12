@@ -12,12 +12,12 @@ struct Movie: Codable {
     var name: String
     var rawReleaseDate: String = ""
     var artworkUrl: URL
-    //var genres: [Genre]
+    var genres: [Genre]
     
     enum CodingKeys: String, CodingKey {
         case name
         case rawReleaseDate = "releaseDate"
         case artworkUrl = "artworkUrl100"
-        //case genres
+        case genres
     }
 }
