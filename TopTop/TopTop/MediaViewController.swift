@@ -11,10 +11,13 @@ import UIKit
 
 class MediaViewController: UIViewController {
     
+    var mediaTableView: UITableView!
     var navigationBar: UINavigationBar!
     var customNavigationItem: UINavigationItem!
     var segmentedControl: UISegmentedControl!
     
+    var movies = [Movie]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -43,6 +46,8 @@ class MediaViewController: UIViewController {
             leadingConstraint,
             trailingConstraint
         ])
+        
+        prepareTableView()
     }
     
     private func prepareSegmentedControl() {
@@ -54,6 +59,38 @@ class MediaViewController: UIViewController {
         
         segmentedControl.tintColor = .purple
         segmentedControl.selectedSegmentIndex = 0
+    }
+    
+    private func prepareTableView() {
+        mediaTableView = UITableView(frame: view.frame, style: .plain)
+        mediaTableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(mediaTableView)
+        
+        let topConstraint = mediaTableView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor)
+        let leadingConstraint = mediaTableView.leftAnchor.constraint(equalTo: view.layoutMarginsGuide.leftAnchor)
+        let trailingConstraint = mediaTableView.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor)
+        let bottomConstraint = mediaTableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
+        
+        NSLayoutConstraint.activate([
+            topConstraint,
+            leadingConstraint,
+            trailingConstraint,
+            bottomConstraint
+        ])
+        
+        mediaTableView.dataSource = self
+        mediaTableView.delegate = self
+    }
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension MediaViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
 
