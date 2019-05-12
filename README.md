@@ -6,7 +6,4 @@ Since the goal was to make it under an hour, I did not factor out generic code, 
 
 ## Screenshots
 
-![](MoviesVertical.png){:height="50%" width="50%"}
-![](MoviesHorizontal.png){:height="50%" width="50%"}
-![](PlaylistsVertical.png){:height="50%" width="50%"}
-![](PlaylistsHorizontal.png){:height="50%" width="50%"}
+<img src="MoviesVertical.png" width="100" height="100">
