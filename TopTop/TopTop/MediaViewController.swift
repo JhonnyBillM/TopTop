@@ -59,6 +59,7 @@ class MediaViewController: UIViewController {
         
         segmentedControl.tintColor = .purple
         segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
     }
     
     private func prepareTableView() {
@@ -80,6 +81,33 @@ class MediaViewController: UIViewController {
         
         mediaTableView.dataSource = self
         mediaTableView.delegate = self
+        
+        mediaTableView.register(MovieTableViewCell.self, forCellReuseIdentifier: movieCellReuseIdentifier)
+        mediaTableView.estimatedRowHeight = 60
+        
+        // Emulate we selected the first index.
+        segmentedControlChanged()
+    }
+    
+    @objc func segmentedControlChanged() {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0 :
+            // Movies.
+            Networking.shared.movies { (result) in
+                switch result {
+                case .success(let _movies):
+                    DispatchQueue.main.async {
+                        self.movies = _movies
+                        self.mediaTableView.reloadData()
+                    }
+                case .failure(_): break
+                }
+            }
+        case 1:
+            break
+        default:
+            break
+        }
     }
 }
 
@@ -90,7 +118,16 @@ extension MediaViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = mediaTableView.dequeueReusableCell(withIdentifier: movieCellReuseIdentifier, for: indexPath) as? MovieTableViewCell else {
+            fatalError("Could not dequeue MoviewTableViewCell")
+        }
+        cell.movie = movies[indexPath.row]
+        cell.numberLabel.text = "\(indexPath.row)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 
