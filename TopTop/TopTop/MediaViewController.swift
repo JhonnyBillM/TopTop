@@ -122,7 +122,7 @@ extension MediaViewController: UITableViewDataSource, UITableViewDelegate {
             fatalError("Could not dequeue MoviewTableViewCell")
         }
         cell.movie = movies[indexPath.row]
-        cell.numberLabel.text = "\(indexPath.row)"
+        cell.numberLabel.text = "\(indexPath.row + 1)"
         return cell
     }
     
