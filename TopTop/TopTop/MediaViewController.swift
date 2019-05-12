@@ -17,6 +17,7 @@ class MediaViewController: UIViewController {
     var segmentedControl: UISegmentedControl!
     
     var movies = [Movie]()
+    var playlists = [Playlist]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +84,8 @@ class MediaViewController: UIViewController {
         mediaTableView.delegate = self
         
         mediaTableView.register(MovieTableViewCell.self, forCellReuseIdentifier: movieCellReuseIdentifier)
+        mediaTableView.register(PlaylistTableViewCell.self, forCellReuseIdentifier: playlistCellReuseIdentifier)
+        
         mediaTableView.estimatedRowHeight = 60
         
         // Emulate we selected the first index.
@@ -104,6 +107,16 @@ class MediaViewController: UIViewController {
                 }
             }
         case 1:
+            Networking.shared.playlists { (result) in
+                switch result {
+                case .success(let _playlists):
+                    DispatchQueue.main.async {
+                        self.playlists = _playlists
+                        self.mediaTableView.reloadData()
+                    }
+                case .failure(_): break
+                }
+            }
             break
         default:
             break
@@ -114,16 +127,29 @@ class MediaViewController: UIViewController {
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension MediaViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        if segmentedControl.selectedSegmentIndex == 0 {
+            return movies.count
+        } else {
+            return playlists.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = mediaTableView.dequeueReusableCell(withIdentifier: movieCellReuseIdentifier, for: indexPath) as? MovieTableViewCell else {
-            fatalError("Could not dequeue MoviewTableViewCell")
+        if segmentedControl.selectedSegmentIndex == 0 {
+            guard let cell = mediaTableView.dequeueReusableCell(withIdentifier: movieCellReuseIdentifier, for: indexPath) as? MovieTableViewCell else {
+                fatalError("Could not dequeue MoviewTableViewCell")
+            }
+            cell.movie = movies[indexPath.row]
+            cell.numberLabel.text = "\(indexPath.row + 1)"
+            return cell
+        } else {
+            guard let cell = mediaTableView.dequeueReusableCell(withIdentifier: playlistCellReuseIdentifier, for: indexPath) as? PlaylistTableViewCell else {
+                fatalError("Could not dequeue PlaylistTableViewCell")
+            }
+            cell.playlist = playlists[indexPath.row]
+            cell.numberLabel.text = "\(indexPath.row + 1)"
+            return cell
         }
-        cell.movie = movies[indexPath.row]
-        cell.numberLabel.text = "\(indexPath.row + 1)"
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
