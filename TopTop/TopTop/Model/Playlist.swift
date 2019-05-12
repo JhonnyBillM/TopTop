@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct Playlist: Codable {
+    var name: String
+    var artworkUrl: URL
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case artworkUrl = "artworkUrl100"
+    }
+}
