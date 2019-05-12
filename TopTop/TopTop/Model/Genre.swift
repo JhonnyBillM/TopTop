@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+/// Defines an iTunes Media Genre.
+struct Genre: Codable {
+    var id: String
+    var name: String
+    var url: URL
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "genreId"
+        case name
+        case url
+    }
+}
