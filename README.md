@@ -6,4 +6,7 @@ Since the goal was to make it under an hour, I did not factor out generic code, 
 
 ## Screenshots
 
-<img src="MoviesVertical.png" width="100" height="100">
+<img src="MoviesVertical.png" width="300" height="600">
+<img src="MoviesHorizontal.png" width="300" height="600">
+<img src="PlaylistsVertical.png" width="300" height="600">
+<img src="PlaylistsHorizontal.png" width="300" height="600">
