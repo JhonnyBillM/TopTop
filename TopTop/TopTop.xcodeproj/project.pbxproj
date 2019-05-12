@@ -14,6 +14,7 @@
 		AC0FEBCC228838880094BA3D /* TopTopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0FEBCB228838880094BA3D /* TopTopUITests.swift */; };
 		AC0FEBDB228839480094BA3D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0FEBDA228839480094BA3D /* Movie.swift */; };
 		AC4EE171228839D9008A282D /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE170228839D9008A282D /* Genre.swift */; };
+		AC4EE17322883AB0008A282D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE17222883AB0008A282D /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AC0FEBCD228838880094BA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC0FEBDA228839480094BA3D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		AC4EE170228839D9008A282D /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		AC4EE17222883AB0008A282D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				AC0FEBB2228838880094BA3D /* Assets.xcassets */,
 				AC0FEBB4228838880094BA3D /* LaunchScreen.storyboard */,
 				AC0FEBB7228838880094BA3D /* Info.plist */,
+				AC4EE17222883AB0008A282D /* Networking.swift */,
 			);
 			path = TopTop;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				AC4EE171228839D9008A282D /* Genre.swift in Sources */,
 				AC0FEBDB228839480094BA3D /* Movie.swift in Sources */,
 				AC0FEBAC228838860094BA3D /* AppDelegate.swift in Sources */,
+				AC4EE17322883AB0008A282D /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
