@@ -17,6 +17,8 @@
 		AC4EE17322883AB0008A282D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE17222883AB0008A282D /* Networking.swift */; };
 		AC4EE17522883D97008A282D /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE17422883D97008A282D /* MediaViewController.swift */; };
 		AC4EE17722884308008A282D /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE17622884308008A282D /* MovieTableViewCell.swift */; };
+		AC4EE1792288481E008A282D /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE1782288481E008A282D /* Playlist.swift */; };
+		AC4EE17B2288493A008A282D /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4EE17A2288493A008A282D /* PlaylistTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		AC4EE17222883AB0008A282D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		AC4EE17422883D97008A282D /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		AC4EE17622884308008A282D /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		AC4EE1782288481E008A282D /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		AC4EE17A2288493A008A282D /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				AC4EE17222883AB0008A282D /* Networking.swift */,
 				AC4EE17422883D97008A282D /* MediaViewController.swift */,
 				AC4EE17622884308008A282D /* MovieTableViewCell.swift */,
+				AC4EE17A2288493A008A282D /* PlaylistTableViewCell.swift */,
 			);
 			path = TopTop;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				AC0FEBDA228839480094BA3D /* Movie.swift */,
 				AC4EE170228839D9008A282D /* Genre.swift */,
+				AC4EE1782288481E008A282D /* Playlist.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 				AC4EE171228839D9008A282D /* Genre.swift in Sources */,
 				AC4EE17522883D97008A282D /* MediaViewController.swift in Sources */,
 				AC4EE17722884308008A282D /* MovieTableViewCell.swift in Sources */,
+				AC4EE17B2288493A008A282D /* PlaylistTableViewCell.swift in Sources */,
+				AC4EE1792288481E008A282D /* Playlist.swift in Sources */,
 				AC0FEBDB228839480094BA3D /* Movie.swift in Sources */,
 				AC0FEBAC228838860094BA3D /* AppDelegate.swift in Sources */,
 				AC4EE17322883AB0008A282D /* Networking.swift in Sources */,
